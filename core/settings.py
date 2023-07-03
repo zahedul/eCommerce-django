@@ -13,12 +13,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 INSTALLED_APPS = [
     # admin-dashboard defintion
     'jazzmin',
-     
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -31,7 +30,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'crispy_forms',
     'mptt',
-    
+
     # internal-apps definition
     'account',
     'address',
@@ -93,7 +92,7 @@ DATABASES = {
 }
 
 # PostgrSQL Database Configuration
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #        'NAME': 'EtShopStoreDB',
@@ -102,7 +101,7 @@ DATABASES = {
 #        'HOST': 'localhost',
 #        'PORT': '5432',
 #    }
-#}
+# }
 
 
 # Password validation
@@ -113,14 +112,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -172,26 +170,26 @@ CKEDITOR_CONFIGS = {
 # django-jazzmin config [admin dashboard]
 JAZZMIN_SETTINGS = {
     # title of the window 
-    "site_title": "ET-SHOP STORE",
+    "site_title": "ECOM STORE",
     # Title on the login screen (19 chars max) 
-    "site_header": "ET-SHOP STORE",
+    "site_header": "ECOM STORE",
     # Title on the brand (19 chars max)
-    "site_brand": "ET-SHOP STORE",
+    "site_brand": "ECOM STORE",
     # Logo to use for your site, present in static files
     "site_logo": "images/logo2.png",
 
-    "welcome_sign": "Welcome to the ET-SHOP STORE",
+    "welcome_sign": "Welcome to the ECOM STORE",
     # Copyright on the footer
-    "copyright": "ET-SHOP STORE",
+    "copyright": "ECOM STORE",
     "user_avatar": None,
 
     # List of model admins to search from the search bar, search bar omitted if excluded
-    "search_model": ["account.User",'shop.Product','shop.Order'],
+    "search_model": ["account.User", 'shop.Product', 'shop.Order'],
 
-     # Links to put along the top menu
+    # Links to put along the top menu
     "topmenu_links": [
         # Url that gets reversed (Permissions can be added)
-        {"name": "ET-SHOP STORE", "url": "home", "permissions": ["account.view_user"]},
+        {"name": "ECOM STORE", "url": "home", "permissions": ["account.view_user"]},
         # model admin to link to (Permissions checked against model)
         {"model": "account.User"},
     ],
@@ -206,19 +204,19 @@ JAZZMIN_SETTINGS = {
         "account.user": "fas fa-user",
         "auth.Group": "fas fa-users",
         "product.Product": "fas fa-shopping-basket",
-        "product.Category":"fas fa-list",
-        "order.Order" :"fas fa-list-alt",
-        "address.Address":"fas fa-map-marker",
-        "coupon.Coupon":"fas fa-check-circle",
-        "cart.Cart":"fas fa-cart-plus",
-        "wishlist.WishlistItem":"fas fa-heart",
-        "shop.Sliders":"fas fa-anchor",
-        "wishlist.Wishlist":"fas fa-heart",
-        "order.ReturnOrder":"fas fa-reply",
-        #"shop.Pages":"fas fa-link",
-        "review.Review":"fas fa-eye",
-        "shop.Sale":"fas fa-plus-square",
-        "shop.SalesItem":"fas fa-id-card",
+        "product.Category": "fas fa-list",
+        "order.Order": "fas fa-list-alt",
+        "address.Address": "fas fa-map-marker",
+        "coupon.Coupon": "fas fa-check-circle",
+        "cart.Cart": "fas fa-cart-plus",
+        "wishlist.WishlistItem": "fas fa-heart",
+        "shop.Sliders": "fas fa-anchor",
+        "wishlist.Wishlist": "fas fa-heart",
+        "order.ReturnOrder": "fas fa-reply",
+        # "shop.Pages":"fas fa-link",
+        "review.Review": "fas fa-eye",
+        "shop.Sale": "fas fa-plus-square",
+        "shop.SalesItem": "fas fa-id-card",
     },
     # Related Modal #
     #################
@@ -270,4 +268,3 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-success",
     },
 }
-

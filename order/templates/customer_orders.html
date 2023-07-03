@@ -29,28 +29,28 @@
                         <div class="col-xl-4 col-lg-4 col-md-12 col-12 px-5">
                             <div class="text-center">
                                 <h4 class="mb-1">Your order total amount</h4>
-                                <h1 class="mb-0 font-weight-bold">{{order.total}} Birr</h1>
+                                <h1 class="mb-0 font-weight-bold">{{order.total}} BDT</h1>
                                 <table class="mx-auto my-3 w-100">
                                     <tbody>
                                         <tr>
                                             <td class="font-weight-medium pb-2 text-left">Subtotal :</td>
                                             <td class="text-right pb-2 font-weight-medium">
-                                                {{order.sub_total}} Birr</td>
+                                                {{order.sub_total}} BDT</td>
                                         </tr>
 
                                         <tr>
                                             <td class="font-weight-medium pb-2 text-left">Delivery charge:</td>
                                             <td class="text-right text-info pb-2 font-weight-medium">
-                                                {{order.delivery_charge}} Birr</td>
+                                                {{order.delivery_charge}} BDT</td>
                                         </tr>
 
                                         <tr>
                                             <td class="font-weight-medium pb-2 text-left">Discount:</td>
                                             <td class="text-right text-danger pb-2 font-weight-medium">
                                                 {% if order.coupon %}
-                                                 - {{order.coupon.value}} Birr
+                                                 - {{order.coupon.value}} BDT
                                                 {% else %}
-                                                  0.0 Birr
+                                                  0.0 BDT
                                                 {% endif %}
                                             </td>
                                         </tr>
@@ -87,7 +87,7 @@
                                         <p class="my-0 f-16">{{i.product.title}}</p>
 
                                         <div class="d-flex justify-content-between">
-                                            <h4 class="mt-1 font-weight-semi-bold mb-0 f-18">{{i.price}} Birr</h4>
+                                            <h4 class="mt-1 font-weight-semi-bold mb-0 f-18">{{i.price}} BDT</h4>
                                         </div>
                                     </div>
                                 </div>

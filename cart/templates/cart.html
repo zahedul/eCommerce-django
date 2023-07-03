@@ -21,7 +21,7 @@
                         <div class="d-flex justify-content-between">
                             {% if i.color %}<span class="text-muted">Color: {{i.color}}</span>{% endif %}
                             {% if i.size %}<span class="text-muted">Size: {{i.size | upper}}</span>{% endif %}
-                            <span class="text-muted"> {{i.quantity}} x {{i.price}} Birr = {{i.total}} Birr</span>
+                            <span class="text-muted"> {{i.quantity}} x {{i.price}} BDT = {{i.total}} BDT</span>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                 <div class="d-flex justify-content-between align-items-center mt-3">
 
                     {% if address %}
-                    <span class="text-muted">Delivery: {{ i.delivery_price }} Birr</span>
+                    <span class="text-muted">Delivery: {{ i.delivery_price }} BDT</span>
                     {% endif %}
 
                     <div>
@@ -54,14 +54,14 @@
                     <tbody>
                         <tr>
                             <td class="font-weight-medium pb-2">Subtotal :</td>
-                            <td class="text-right pb-2 "> {{cart.sub_total}} Birr</td>
+                            <td class="text-right pb-2 "> {{cart.sub_total}} BDT</td>
                         </tr>
 
                         <tr>
                             <td class="font-weight-medium pb-2">Delivery charge:</td>
                             <td class="text-right text-info pb-2 ">
                                 {% if address %}
-                                {{cart.delivery_charge}} Birr
+                                {{cart.delivery_charge}} BDT
                                 {% else %}
                                 <h6 class="text-muted">Please Enter Delivery Address.</h6>
                                 {% endif %}
@@ -70,12 +70,12 @@
 
                         <tr>
                             <td class="font-weight-medium pb-2">Discount:</td>
-                            <td class="text-right text-danger pb-2 ">{{cart.get_discount}} - Birr</td>
+                            <td class="text-right text-danger pb-2 ">{{cart.get_discount}} - BDT</td>
                         </tr>
 
                         <tr>
                             <td class="f-18 text-dark font-weight-medium pb-2">Total</td>
-                            <td class="f-18 text-dark text-right font-weight-semi-bold pb-2 ">{{cart.total}} Birr</td>
+                            <td class="f-18 text-dark text-right font-weight-semi-bold pb-2 ">{{cart.total}} BDT</td>
                         </tr>
                     </tbody>
                 </table>
@@ -120,30 +120,6 @@
                             <label class="form-check-label" for="cod"><img class="img-4by3-sm"
                                     src="{% static 'images/delivery.jpg' %}" alt="Cash On Delivery"></label>
                         </div>
-                        <div class="form-check">
-                            <input type="radio" id="telebirr" name="payment_method" value="Telebirr" class="form-check-input">
-                            <label class="form-check-label" for="telebirr"><img class="img-4by3-md"
-                                    src="{% static 'images/telebirr.jpg' %}" alt="Payment via Telebirr"></label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="radio" id="cbe" name="payment_method" value="CBE" class="form-check-input">
-                            <label class="form-check-label" for="cbe"><img class="img-4by3-md"
-                                    src="{% static 'images/cbe.jpg' %}" alt=""></label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="radio" id="awash" name="payment_method" value="Awash Bank" class="form-check-input">
-                            <label class="form-check-label" for="awash"><img class="img-4by3-md"
-                                    src="{% static 'images/awash.jpg' %}" alt=""></label>
-                        </div>
-
-                        <div class="form-check">
-                            <input type="radio" id="cbo" name="payment_method" value="CBO" class="form-check-input">
-                            <label class="form-check-label" for="cbo"><img class="img-4by3-md"
-                                    src="{% static 'images/cbo.jpg' %}" alt=""></label>
-                        </div>
-                        
                     </div>
                 </div>
 

@@ -6,15 +6,15 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('et-admin/', admin.site.urls),
-    path('',include('product.urls')),
-    path('',include('account.urls')),
+    path('', include('product.urls')),
+    path('', include('account.urls')),
     path('accounts/', include('account.passwords.urls')), 
-    path('',include('wishlist.urls')),
-    path('',include('cart.urls')),
-    path('',include('address.urls')),
-    path('',include('order.urls')),
-    path('',include('review.urls')),
-    path('',include('shop.urls')),
+    path('', include('wishlist.urls')),
+    path('', include('cart.urls')),
+    path('', include('address.urls')),
+    path('', include('order.urls')),
+    path('', include('review.urls')),
+    path('', include('shop.urls')),
 
     path('ckeditor/', include('ckeditor_uploader.urls')),
     # path('__debug__/', include(debug_toolbar.urls)),  
